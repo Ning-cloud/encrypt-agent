@@ -1,4 +1,4 @@
-基于java agent和ASM库实现的可插拔的字段级透明脱敏工具
+基于java agent和ASM库实现的可插拔的字段级透明脱敏工具，目前支持对string类型字段的setter方法进行加密、对string类型的getter方法进行解密，加密算法目前仅支持AES ECB。
 
 1. 下载项目
 
@@ -26,7 +26,7 @@
    -javaagent:/Users/ningshangyong/Downloads/encrypt-agent/target/encrypt-agent-1.0.jar=ECB,1234567890123456
    ```
 
-   agent的参数用英文逗号分隔，第一个参数为加密需要使用的算法，第二个参数表示加密使用的key，目前仅支持AES ECB
+   agent的参数用英文逗号分隔，第一个参数为加密需要使用的算法，第二个参数表示加密使用的key
 
 使用样例
 ```
