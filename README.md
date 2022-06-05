@@ -1,9 +1,32 @@
 基于java agent和ASM库实现的可插拔的字段级透明脱敏工具
 
 1. 下载项目
+
+   ```
+   git clone https://github.com/Ning-cloud/encrypt-agent.git
+   ```
+   
 2. mvn install 将项目安装到本地代码仓库
+
 3. 引入项目
+
+   ```
+   <dependency>
+     <groupId>com.nsy</groupId>
+     <artifactId>encrypt-agent</artifactId>
+     <version>1.0</version>
+   </dependency>
+   ```
+
+   
+
 4. 配置启动参数：
+
+   ```
+   -javaagent:/Users/ningshangyong/Downloads/encrypt-agent/target/encrypt-agent-1.0.jar=ECB,1234567890123456
+   ```
+
+   agent的参数用英文逗号分隔，第一个参数为加密需要使用的算法，第二个参数表示加密使用的key，目前仅支持AES ECB
 
 使用样例
 ```
